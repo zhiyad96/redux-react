@@ -1,8 +1,6 @@
 import {configureStore} from "@reduxjs/toolkit"
-import { middleware } from "./middleware"
-import {counterreducer} from"./couterreducer"
+import todoreducer from"./todoslice"
 export const store= configureStore({
-  reducer:{counter:counterreducer},
-  middleware:(getmiddleware)=>getmiddleware().concat(middleware)
+  reducer:{todo:todoreducer},
 
 })
